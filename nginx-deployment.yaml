@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   namespace: apps
+  annotations:
+    client.lifecycle.config.k8s.io/mutation: ignore
 spec:
   selector:
     matchLabels:
